@@ -11,8 +11,12 @@ import { Album } from "./albums/album.model";
 export class AppComponent implements OnInit {
   title = 'my-angular-albums';
   albumsArray: Album[];
+  titleCounter = 1;
 
   ngOnInit(): void {
+    const interval = setInterval(() => this.titleCounter++, 2000);
+    setTimeout(() => clearInterval(interval), 6000);
+
     this.albumsArray = [
       {
         id: 1,
@@ -56,8 +60,6 @@ export class AppComponent implements OnInit {
         duration: "1:33:43",
         URL: "https://www.allmusic.com/album/the-beatles-white-album-mw0000418113"
       }];
-
-    console.log(this.albumsArray);
   }
 }
 
