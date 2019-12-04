@@ -4,30 +4,7 @@
     The Torture: {{ title }}!
   </h1>
 </div>
-<br>
 
-<div class="container-fluid">
-  <div class="card-deck">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">ID: {{ repairs[0].id }}</h2>
-          <h3 class="card-title">Description: {{ repairs[0].name }}</h3>
-          <h3 class="card-text">Priority: {{ repairs[0].priority }}</h3>
-          <h3>Materials: {{ repairs[0].materials }} {{ repairs[0].price }}</h3>
-          <h3>Required Tools: {{ repairs[0].tools }}</h3>
-          <h3>Start Date: {{ repairs[0].startDate }} </h3>
-          <h3>Completion Date: {{ repairs[0].completionDate }}</h3>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<h2>Links: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-repair-list></app-repair-list>
 
 <router-outlet></router-outlet>
