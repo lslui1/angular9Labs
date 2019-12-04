@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Repair } from '../repair.model';
 
 @Component({
@@ -9,6 +9,13 @@ import { Repair } from '../repair.model';
 export class RepairJobComponent implements OnInit {
   @Input()
   repair: Repair;
+
+  @Output()
+  repairClicked: EventEmitter<Repair> = new EventEmitter<Repair>();
+
+  showRepair() {
+    this.repairClicked.emit(this.repair);
+  }
 
   constructor() { }
 

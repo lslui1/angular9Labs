@@ -22,4 +22,7 @@ export class RepairListComponent implements OnInit {
     ];
   }
 
+  parentFunctionHandler(repair) {
+    alert('Repair ' + repair.name + ' was sent from the repair card component');
+  }
 }

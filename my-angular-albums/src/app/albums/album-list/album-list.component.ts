@@ -10,6 +10,7 @@ import { Album } from "../album.model";
 export class AlbumListComponent implements OnInit {
 
   albumsArray: Album[];
+  clickedAlbum: string;
 
   constructor() {
   }
@@ -58,5 +59,9 @@ export class AlbumListComponent implements OnInit {
         duration: "1:33:43",
         URL: "https://www.allmusic.com/album/the-beatles-white-album-mw0000418113"
       }];
+  }
+
+  parentFunctionHandler(album) {
+    alert('Album ' + album.albumName + ' was sent from the album card component');
   }
 }
